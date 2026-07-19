@@ -42,6 +42,8 @@ status: "draft"
 
 Length recommendations are based on analysis of all 26 existing HIPs. The "typical" range covers the 25th-75th percentile. These are guidelines, not rules — a complex feature HIP will naturally be longer than a simple process HIP.
 
+Aim for the shortest version that fully meets each section's purpose. The **target** marks what is usually *enough*; the **typical** range is a ceiling to stay within, not a quota to reach. Prefer focus over length — padding a section to hit a number buries its substance.
+
 ### Abstract
 **Typical: 25-100 words. Target: ~50 words. Max observed: 185 words.**
 

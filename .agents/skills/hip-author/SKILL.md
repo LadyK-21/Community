@@ -66,10 +66,12 @@ Do not proceed to Phase 2 until the user explicitly confirms the idea is well-sc
 
 Work through each section one at a time. For every section:
 
-1. **Draft** the section content based on everything discussed so far. Use the length guidance from `references/hip-template.md` — aim for the "typical" range, not the maximum.
+1. **Draft** the section content based on everything discussed so far.
 2. **Present** the draft to the user with the section header, and ask them to edit directly or suggest changes.
 3. **Wait** for the user to confirm or revise. If they revise, incorporate their changes.
 4. **Clarify** — before moving to the next section, ask 1-2 targeted questions that will inform the upcoming sections. These questions should arise naturally from what was just written.
+
+**Drafting principle: write each section as simply as possible while fully serving its purpose.** Each section below states what it must accomplish and gives a **target** (what is usually enough) and a **ceiling** (both drawn from real HIPs; see `references/hip-template.md` for full ranges). Aim for the target and treat the ceiling as a limit to stay under — not a quota to fill. If a section's purpose is met in fewer words, leave it shorter; reviewers reward focus, and padding buries the substance. Exceed the ceiling only when the section genuinely needs it (a detailed Specification, a breaking-change migration).
 
 ### Section order
 
@@ -79,13 +81,13 @@ Generate the YAML frontmatter. Use `hip: 9999` as the placeholder number, today'
 
 #### 2. Abstract
 
-Target ~50 words (existing HIPs average 67, median 46). Draw from the summary confirmed in Phase 1. The abstract should be self-contained — a reader should understand what the proposal does without reading further. Avoid implementation details.
+Target ~50 words (ceiling ~100). Draw from the summary confirmed in Phase 1. The abstract must be self-contained — a reader should understand what the proposal does without reading further. Avoid implementation details.
 
 Before moving on, ask: "What existing workarounds do people use today? Understanding the current pain points will strengthen the Motivation section."
 
 #### 3. Motivation
 
-Target ~150 words. This section is critical — proposals without sufficient motivation get rejected outright. Use subheadings to organize:
+Target ~150 words (ceiling ~200). This section is critical — proposals without sufficient motivation get rejected outright. Use subheadings to organize, including only those that carry weight for this proposal:
 
 - **Current Limitations** — what can't users do today?
 - **Real-World Impact** — concrete examples, not hypotheticals
@@ -96,7 +98,7 @@ Before moving on, ask: "What alternative approaches did you consider? Why did yo
 
 #### 4. Rationale
 
-Target ~100 words. Explain the "why" behind key design decisions. Use subheadings for distinct decisions (e.g., "### Why X over Y"). Cover:
+Target ~100 words (ceiling ~150). Explain the "why" behind key design decisions. Use subheadings for distinct decisions (e.g., "### Why X over Y"). Cover:
 
 - Why this approach over the alternatives discussed
 - How similar problems are handled in other projects if relevant
@@ -106,7 +108,7 @@ Before moving on, ask: "Can you describe the technical details? What would the A
 
 #### 5. Specification
 
-Target ~350 words (the largest section). For feature HIPs, this needs to be detailed enough for someone else to implement. Include:
+Target ~350 words (ceiling ~680 for complex features). Usually the most detailed section. For feature HIPs, it must be detailed enough for someone else to implement — but only as detailed as that requires. Include:
 
 - Data structures, CLI flags, API shapes as appropriate
 - Usage examples showing realistic scenarios (use code blocks)
@@ -119,19 +121,19 @@ Before moving on, ask: "Does this change break anything for existing users? Coul
 
 #### 6. Backwards Compatibility
 
-Target ~30 words. Often short — for purely additive changes, a sentence confirming no breakage is sufficient. For breaking changes, be explicit about severity, migration path, and whether a major version is required.
+Target ~30 words (ceiling ~90). Often a single sentence — for purely additive changes, confirming no breakage is enough. For breaking changes, be explicit about severity, migration path, and whether a major version is required.
 
 Before moving on, ask: "Could someone misuse this feature? What's the worst case from a security perspective?"
 
 #### 7. Security Implications
 
-Target ~20 words. Can be very brief ("No security implications") for benign features. For features touching data exposure or trust boundaries, cover attack surface, risks, and mitigations.
+Target ~20 words (ceiling ~40). Often one line ("No security implications") for benign features. For features touching data exposure or trust boundaries, cover attack surface, risks, and mitigations.
 
 Before moving on, ask: "If you were writing docs for this, what's the one example you'd lead with? How would you explain this to a new Helm user?"
 
 #### 8. How to Teach This
 
-Target ~50 words. Document:
+Target ~50 words (ceiling ~70). Cover the documentation impact and nothing more:
 
 - Documentation additions or changes needed
 - The key example pattern users should follow
@@ -139,19 +141,19 @@ Target ~50 words. Document:
 
 #### 9. Reference Implementation
 
-Target ~15 words. Link to a PR or describe what the implementation will involve. If nothing exists yet, a brief description of what the implementation entails is fine.
+Target ~15 words (ceiling ~20). Usually one line: link to a PR, or briefly describe what the implementation will involve. If nothing exists yet, a short description is fine.
 
 #### 10. Rejected Ideas
 
-Target ~50 words. Capture alternatives discussed (in Phase 1 and during drafting) with brief explanations of why they were rejected. Use a bulleted list — each entry should be 1-2 sentences.
+Target ~50 words (ceiling ~100). Capture alternatives discussed (in Phase 1 and during drafting) with brief explanations of why they were rejected. Use a bulleted list — each entry 1-2 sentences.
 
 #### 11. Open Issues
 
-Target ~15 words. Any unresolved questions. Fine to submit a draft HIP with open issues — they're resolved during review.
+Target ~15 words (ceiling ~50). Any unresolved questions, kept brief. Fine to submit a draft HIP with open issues — they're resolved during review.
 
 #### 12. References
 
-Collect all URLs, specs, and materials referenced throughout the HIP.
+Target ~20 words (ceiling ~40). Collect all URLs, specs, and materials referenced throughout the HIP.
 
 ### Optional sections
 
